@@ -3,6 +3,11 @@ import argparse
 import requests
 from datetime import datetime
 
+# This script fetches all releases in github for a certain organization using the github token stored in the environment
+# variable GITHUB_TOKEN. Example call
+#
+# python github-releases.py --from-date 2024-01-01 --to-date 2025-01-01 --org budbee --author jesper-budbee --detailed
+
 def print_release_details(repo_releases, repo_name, print_detailed, print_repo_name):
     r = len(repo_name)/2
     l = int(60 - r)
